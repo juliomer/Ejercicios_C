@@ -10,7 +10,6 @@
 
 void main(){
 	// Variables	
-	int r=0, bi=0, bs=0, ht=0, baset=0, altt=0;
 	float op1=0, op2=0;
 	char op;
 	
@@ -32,45 +31,45 @@ void main(){
 			}
 		}while (!(op=='+' || op=='-' || op=='*' || op=='/' || op=='p' || op=='s'));
 		
-	switch(op){
-	case '+':
-		printf("Introduce operandos: ");
-		scanf("%f %f", &op1, &op2);	
-		printf("\nSuma(%0.2f + %0.2f): %0.2f \n", op1, op2, op1+op2);
-		break;
-	case '-':
-		printf("Introduce operandos: ");
-		scanf("%f %f", &op1, &op2);	
-		printf("\nResta(%0.2f - %0.2f): %0.2f \n", op1, op2, op1-op2);		
-		break;
-	case '*':
-		printf("Introduce operandos: ");
-		scanf("%f %f", &op1, &op2);	
-		printf("\nMultiplicacion(%0.2f * %0.2f): %0.2f \n", op1, op2, op1*op2);		
-	break;
-	case '/':
-		do{		
+		switch(op){
+		case '+':
 			printf("Introduce operandos: ");
 			scanf("%f %f", &op1, &op2);	
-			if (op2==0){
-				printf("\nEl segundo operando no puede ser cero \n");
-			}
-		}while (op2==0);
-		printf("\nDivision(%0.2f / %0.2f): %0.2f \n", op1, op2, op1/op2);		
-	break;
-	case 'p':
-		printf("Introduce operandos: ");
-		scanf("%f %f", &op1, &op2);	
-		printf("\nPotencia(%0.2f ^ %0.2f): %0.2f \n", op1, op2, pow(op1,op2));		
-	break;
-	case 's':
-		printf("\nFIN");
+			printf("\nSuma(%0.2f + %0.2f): %0.2f \n\n", op1, op2, op1+op2);
+			break;
+		case '-':
+			printf("Introduce operandos: ");
+			scanf("%f %f", &op1, &op2);	
+			printf("\nResta(%0.2f - %0.2f): %0.2f \n\n", op1, op2, op1-op2);		
+			break;
+		case '*':
+			printf("Introduce operandos: ");
+			scanf("%f %f", &op1, &op2);	
+			printf("\nMultiplicacion(%0.2f * %0.2f): %0.2f \n\n", op1, op2, op1*op2);		
 		break;
-	default:
-		printf("\nOpción incorrecta.");
+		case '/':
+			do{		
+				printf("Introduce operandos: ");
+				scanf("%f %f", &op1, &op2);	
+				if (op2==0){
+					printf("\nEl segundo operando no puede ser cero \n");
+				}
+			}while (op2==0);
+			printf("\nDivision(%0.2f / %0.2f): %0.2f \n\n", op1, op2, op1/op2);		
 		break;
-	}
-	
+		case 'p':
+			printf("Introduce operandos: ");
+			scanf("%f %f", &op1, &op2);	
+			printf("\nPotencia(%0.2f ^ %0.2f): %0.2f \n\n", op1, op2, pow(op1,op2));		
+		break;
+		case 's':
+			printf("\nFIN");
+			break;
+		default:
+			printf("\nOpcion incorrecta.");
+			break;
+		}
+		
 	}while (op!='s');
 			
 }

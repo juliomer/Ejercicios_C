@@ -10,33 +10,53 @@
 
 typedef unsigned char BYTE;
 
-int binario(int num);
+// Prototipos
+void binario(int num);
+
 
 void main(){
-	
-	unsigned char a;
+	// Variables
+	unsigned char a, aux, b;
 		
 	printf("Introduce un caracter: ");
 	scanf("%c", &a);	
 	
 	printf("\nCaracter: %c Dec: %d  Hex: %X", a, a, a);
 	
-	binario(b);
+	printf("\nBinario: ");
+//	binario(a);
 	
 	int i=0;
-	
+	b=a;
 	do{
 		//bin[i++]=(b&1)?'1':'0';
 		//b=b>>1;
-		bin[i++]=(b%2)?'1':'0';
-		b=(int)b/2;		
+		//bin[i++]=(b%2)?'1':'0';
+		aux=((b&1)?'1':'0'); //(b%2)?'1':'0';
+		printf("%d", aux);
+		b=b>>1;		
+		//b=(int)b/2;		
 	}while(b);
-	
-	printf("\nBin= %s", bin);
+	printf("%d", b);
+	//printf("\nBin= %s", bin);
 }
 
 
-int binario(int num){
+
+void binario(int num){
+   int aux, i=0;
+   
+   while (num!=0){
+		aux=(num&1)?'1':'0'; //num%2;
+		num=num>>1;
+   		//num=num/2;
+   		printf("%d",aux);
+   }
+	printf("%d",num);
+}
+
+
+int binarior(int num){
    int aux, i=0;
    char r[8];
    
@@ -45,7 +65,7 @@ int binario(int num){
 
    aux=num%2;
    num=num/2;
-   binario(num);
+   binarior(num);
    r[i]=aux;
    printf("%d",aux);   
 }

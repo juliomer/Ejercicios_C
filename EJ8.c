@@ -14,40 +14,42 @@ void main(){
 	int r=0, bi=0, bs=0, ht=0, baset=0, altt=0;
 	int op=0;
 	
-	do{	
-	printf("Calculo de areas\n");
-	printf("1. Calculo area circulo \n");
-	printf("2. Calculo area triangulo\n");
-	printf("3. Calculo area trapecio\n");
-	printf("0. Salir\n ");
-	printf("Introduce una opcion: ");
-	scanf("%d", &op);
-	
-	switch(op){
-	case 1:
-		printf("Introduce radio del circulo: ");
-		scanf("%d", &r);	
-		printf("\nArea Circulo: %0.2f \n", (PI*r*r));
-		break;
-	case 2:
-		printf("Introduce base y altura del triangulo: ");
-		scanf("%d %d", &baset, &altt );	
-		printf("\nArea Triangulo(b=%d, h=%d)= %0.2f \n", baset, altt, (baset*altt/2));
-		break;
-	case 3:
-		printf("\nIntroduce bases y altura del trapecio: ");
-		scanf("%d %d %d", &bi, &bs, &ht);	
-		printf("\nArea Trapecio(BI=%d, BS=%d, H=%d)= %0.2f \n", bi, bs, ht, (bi+bs)*ht/2);
-		break;
-	case 0:
-		printf("\nFIN");
-		break;
-	default:
-		printf("\nOpción incorrecta.");
-		break;
-	}
-	
-	}while (op!=0);
+	do{
+		// Menu
+		printf("Calculo de areas\n");
+		printf("1. Calculo area circulo \n");
+		printf("2. Calculo area triangulo\n");
+		printf("3. Calculo area trapecio\n");
+		printf("0. Salir\n");
+		printf("Introduce una opcion: ");
+		scanf("%d", &op);
+		printf("\n");
+		
+		switch(op){
+		case 1:
+			printf("Introduce radio del circulo: ");
+			scanf("%d", &r);	
+			printf("\nArea Circulo: %0.2f \n\n", (PI*r*r));
+			break;
+		case 2:
+			printf("Introduce base y altura del triangulo: ");
+			scanf("%d %d", &baset, &altt );	
+			printf("\nArea Triangulo(b=%d, h=%d)= %0.2f \n\n", baset, altt, (baset * altt / 2.0));
+			break;
+		case 3:
+			printf("Introduce bases y altura del trapecio: ");
+			scanf("%d %d %d", &bi, &bs, &ht);	
+			printf("\nArea Trapecio(BI=%d, BS=%d, H=%d)= %0.2f \n\n", bi, bs, ht, ((bi+bs)*ht/2.0));
+			break;
+		case 0:
+			printf("\nFIN");
+			break;
+		default:
+			printf("\nOpcion incorrecta.");
+			break;
+		}
+		
+		}while (op!=0);
 			
 }
 

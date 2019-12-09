@@ -22,7 +22,7 @@ void main(){
 	
 	printf("\nCaracter: %c  Dec: %d  Hex: %x", a, a, a);
 			
-	printf ("\nDec -> ALTO = % d BAJO = % d ", a&ALTO, a&BAJO);
+	//printf ("\nDec -> ALTO = % d BAJO = % d ", a&ALTO, a&BAJO);
 	printf ("\nHex -> ALTO = % d BAJO = % d ", (a>>4)&0xf, a&0xf);
 	
 	printf ("\nHex -> b7= %d b6= %d b5= %d b4= %d b3= %d b2= %d b1= %d b0= %d ", (a & (MASK<<7)), (a & (MASK<<6)) , (a & (MASK<<5)), (a & (MASK<<4)) , (a & (MASK<<3)), (a & (MASK<<2)) ,(a & (MASK<<1)), (a & (MASK<<0)) );
