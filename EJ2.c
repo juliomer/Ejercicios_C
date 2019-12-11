@@ -7,12 +7,13 @@
 # include <string.h>
 # include <stdlib.h>
 
+// Constantes
 # define ALTO 240
 # define BAJO 15
 # define MASK 0xF
 
 void main(){
-	
+	// Variables
 	unsigned char a, aux;
 	
 	printf("Introduce un caracter: ");

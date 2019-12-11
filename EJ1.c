@@ -7,6 +7,7 @@
 # include <string.h>
 # include <stdlib.h>
 
+// Constantes
 # define ALTO 240
 # define BAJO 15
 # define MASK 0xF
@@ -15,7 +16,7 @@ typedef unsigned char BYTE;
 
 
 void main(){
-	
+	// Variables
 	unsigned char a;
 	//char resultado[8], ra[8], rb[8];
 	
